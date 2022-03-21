@@ -1,3 +1,7 @@
+
+import java.time.*;
+import java.time.format.DateTimeFormatter;
+//import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public class Calendar_Practice {
@@ -20,6 +24,28 @@ public class Calendar_Practice {
         // Returning the amount of weeks in a year
         max = calendar.getMaximum(Calendar.WEEK_OF_YEAR);
         System.out.println("Maximum number of weeks in a year: " + max);
+
+        LocalDate obj1 = LocalDate.now();
+        System.out.println("Today's date year, month, and day: " + obj1);
+        LocalDate obj2 = LocalDate.of(2017, 4, 20);
+        System.out.println(obj2);
+
+        LocalDate date = LocalDate.of(2022, 12, 17);
+        System.out.println(date);
+
+        LocalDateTime current = LocalDateTime.now();
+        System.out.println(current);
+
+        LocalTime sooner = LocalTime.of(17, 00);
+        LocalTime later = LocalTime.of(19, 00);
+        Duration duration = Duration.between(sooner, later);
+        System.out.println(duration.toHours());
+
+        LocalDateTime Obj = LocalDateTime.now();
+        System.out.println("Before formatting: " + Obj);
+        DateTimeFormatter formated = DateTimeFormatter.ofPattern("dd-MM-yyyy MM:hh:ss");
+        String afterFormated = Obj.format(formated);
+        System.out.println("After formatting: " + afterFormated);
 
     }
 }
