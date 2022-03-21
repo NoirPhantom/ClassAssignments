@@ -1,6 +1,6 @@
 //Jonathan Ocampo
 //03/21/22
-//Creating amath practice class to try methods from the Math Class
+//Creating a math practice class to try methods from the Math Class
 
 public class MathPractice {
     public static void main(String[] args) {
